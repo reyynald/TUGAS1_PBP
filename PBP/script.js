@@ -30,3 +30,24 @@ function kirimWhatsApp() {
     let url = `https://api.whatsapp.com/send?phone=${nomorWhatsApp}&text=${teksPesan}`;
     window.open(url, "_blank");
 }
+
+const text = "Saya adalah seorang mahasiswa Ilmu Komputer yang memiliki minat besar dalam pengembangan perangkat lunak dan teknologi. Saat ini, saya sedang mendalami pemrograman, struktur data, dan kecerdasan buatan untuk mengasah keterampilan saya dalam menciptakan solusi inovatif. Saya memiliki pengalaman dalam menggunakan bahasa pemrograman seperti Python, Java, dan JavaScript, serta memahami konsep dasar pengelolaan basis data.";
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50); // Kecepatan mengetik (50ms per huruf)
+    } else {
+        setTimeout(resetText, 2000); // Tunggu 2 detik sebelum mengulang
+    }
+}
+
+function resetText() {
+    document.getElementById("typing-text").innerHTML = "";
+    index = 0;
+    typeWriter();
+}
+
+window.onload = typeWriter;
