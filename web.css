@@ -54,7 +54,6 @@ body {
     }
 }
 
-
 /* Kontainer utama */
 .container {
     width: 60%;
@@ -103,12 +102,20 @@ h2 {
 p, li {
     font-size: 18px;
 }
-.profile-image {
+.profile-main  {
     width: 250px; /* Atur ukuran lebar gambar */
-    height: 359px; /* Atur ukuran tinggi gambar */
+    height: 350px; /* Atur ukuran tinggi gambar */
     object-fit: cover; /* Pastikan gambar tidak terdistorsi */
     display: block;
     margin: 10px auto; /* Pusatkan gambar */
+}
+
+.profile-image  {
+    width: 400px; /* Atur ukuran lebar gambar */
+    height: 200px; /* Atur ukuran tinggi gambar */
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+    display: block;
+    margin: 50px auto; /* Pusatkan gambar */
 }
 
 .profile {
@@ -137,7 +144,7 @@ p, li {
     flex-wrap: wrap; /* Agar responsif di layar kecil */
 }
 
-.container3, .container4, .container5 {
+.container3, .container4, .container5 ,.container6 {
     flex: 5; /* Agar semua container memiliki lebar yang sama */
     max-width: 100%; /* Pastikan tidak terlalu lebar */
     background: rgba(255, 255, 255, 0.2);
@@ -162,11 +169,11 @@ p, li {
 }
 
 /* Efek Hover untuk Semua Kartu Pengalaman */
-.container3, .container4, .container5 {
+ .container, .container3, .container4, .container5, .container6 {
     transition: transform 0.3s ease-in-out;
 }
 
-.container3:hover, .container4:hover, .container5:hover {
+.container:hover, .container3:hover, .container4:hover, .container5:hover, .container6:hover {
     transform: scale(1.05);
 }
 
